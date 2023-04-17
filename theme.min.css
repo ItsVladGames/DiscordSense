@@ -1,38 +1,111 @@
 /**
-* @name Primordial
-* @version Auto Update
-* @author Loxied
-
+ * @name Primordial+
+ * @version 1.8
+ * @author bcard
+ * @authorLink https://primordial.dev/members/bcard.441/
+ * @description A sleek theme based of the most beautiful hack that helps you destroy time itself. (this theme is almost complete but i am still changing it to how i like it and will probably switch the base completly later on)
+ * @website https://primordial.dev/
+ * @source https://primordial.dev/members/bcard.441/
+ * @invite https://primordial.dev/
 */
-@import url("https://discordstyles.github.io/FrostedGlass/dist/FrostedGlass.css");
-@import url('https://fonts.googleapis.com/css2?family=Nunito');
+@import url(//plusinsta.xyz/discord-plus/DiscordPlus-source.theme.css);
+
+/* I've commented most of these values so you can change them yourself.
+   If you're having trouble, or you want to do more than what these values
+   allow for, drop by our server and we can probably help you out! */
+
+/* Font import */
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700|Righteous);
+/* This link loads fonts. Go to fonts.google.com and have a look!
+If there's any fonts you like, click them, select styles that are
+the closest to 400 and 700. If you want more fonts, back out to the
+main page and add more. When you're done, click "View selected families"
+in the top right, click the Embed tab, and replace the entire line with
+the "CSS rules" it gives you. After that, just set the fonts below! */
+
 :root {
---background-image: url('https://i.imgur.com/lVIv6yX.jpg');
---background-image-blur: 5px;
---background-image-size: cover;
---background-image-position: center;
---popout-modal-image: url('https://i.pinimg.com/564x/85/3f/d2/853fd2b248c49aa40dfdd61568f54bbb--cool-pictures-black-white-photography.jpg');
---popout-modal-blur: 100px;
---popout-modal-size: cover;
---popout-modal-position: center;
---home-button-image: url('https://c.tenor.com/hKHt6dJFdVcAAAAC/nohyper-hvh-primordial.gif');
---home-button-size: cover;
---home-button-position: left;
---serverlist-brightness: 0.77;
---left-brightness: 0.85;
---middle-brightness: 0.8;
---right-brightness: 0.3;
---popout-modal-brightness: 0;
---gradient-primary: 255,175,206;
---gradient-secondary: 255,209,251;
---gradient-direction: 360deg;
---tint-colour: 255,211,240;
---tint-brightness: 0.15;
---window-padding: 20px;
---window-roundness: 10px;
---scrollbar-colour: FFD3F0FF;
---link-colour: #FFD3F0FF;
---show-gift-gif-buttons: no-repeat;
---font: 'Nunito';
---update-notice-1: none;
+/* Background image. Falls back to accent color if invalid.
+   To use an image on your computer, send it anywhere on Discord,
+   then right-click and Copy Link, then paste it between the ()'s'. */
+--dplus-background: #151515;
+
+/* Accent color, used to decorate the UI with colors. */
+--dplus-accent-ui: #e2b5c7;
+--dplus-accent-ui-hover: #a38390;
+
+/* Fonts */
+--dplus-font-ui: 'Calibri';
+--dplus-font-body: 'Calibri';
+--dplus-font-header: 'Calibri';
+
+/* Round corner sizes, measured in pixel radius
+   Set avatar/server to 50% for circles
+   UI radius must be in pixels */
+--dplus-radius-ui: 5px;
+--dplus-radius-avatar: 45%;
+--dplus-radius-server: 45%;
+
+/* This determines margins and padding */
+--dplus-spacing-ui: 7px;
+--dplus-spacing-app: 10px;
+
+/* The Home icon */
+--dplus-icon-home-dark: url(https://i.imgur.com/ytQaIad.png);
+--dplus-icon-home-light: url(https://i.imgur.com/ytQaIad.png);
+
+/* Icon sizes */
+--dplus-icon-avatar-chat: 45px;
+--dplus-icon-avatar-list: 32px;
+--dplus-icon-avatar-profile: 80px;
+
+--dplus-icon-server-sidebar: 48px;
+--dplus-icon-server-list: 32px;
+
+/* Width of different elements */
+--dplus-channels-width: 210px;
+--dplus-members-width: 210px;
+--dplus-scrollbar-width: 5px;
+
+/* Blur percentage. Set to 0 to disable blur.
+   Performance may be affected by this option. */
+--dplus-blur-scale: 100;
+
+/* Background covers | Explanations below	*/
+--dplus-dark-bgc-ui-base: #1f1f1f;
+--dplus-dark-bgc-ui-base-hover: #1f1f1f;
+--dplus-dark-bgc-ui-card: #2b2b2b;
+--dplus-dark-bgc-ui-card-hover: hsla(0, 0%, 15%, 0.50);
+--dplus-dark-bgc-chatmsg: #1f1f1f;
+--dplus-dark-bgc-chatmsg-hover: #222222;
+--dplus-dark-bgc-popout: #b4909e;
+--dplus-dark-bgc-button: #1f1f1f;
+--dplus-dark-bgc-button-hover: rgba(255, 255, 255, 0.6);
+--dplus-dark-bgc-server-button: #b4909e;
+--dplus-dark-bgc-server-button-hover: #1f1f1f;
+
+--dplus-light-bgc-ui-base: hsla(0, 0%, 97%, 0.88);
+--dplus-light-bgc-ui-base-hover: hsla(0, 0%, 100%, 0.90);
+--dplus-light-bgc-ui-card: hsla(0, 0%, 93%, 0.75);
+--dplus-light-bgc-ui-card-hover: hsla(0, 0%, 50%, 0.25);
+--dplus-light-bgc-chatmsg: hsla(0, 0%, 97%, 0.88);
+--dplus-light-bgc-chatmsg-hover: hsla(0, 0%, 100%, 0.90);
+--dplus-light-bgc-popout: hsla(0, 0%, 100%, 0.80);
+--dplus-light-bgc-button: hsla(0, 0%, 50%, 0.80);
+--dplus-light-bgc-button-hover: hsla(0, 0%, 40%, 0.50);
+--dplus-light-bgc-server-button: hsla(0, 0%, 95%, 0.75);
+--dplus-light-bgc-server-button-hover: hsla(0, 0%, 100%, 1);
 }
+
+/* Explanations:
+* bgc is short for background cover / color
+* dark/light corresponds to the current active theme
+* ui-base is the main UI
+* ui-base-hover is used when hovering over clickable elements
+* ui-card is for cards like in server discovery
+* ui-card-hover is for hovering over cards
+* chatmsg governs messages in chat and the message box
+* chatmsg-hover is for hovering over a message
+* popout affects all popouts, like context menu, profiles, etc.
+* server-button affects server icons on the left side of the screen
+* server-button-hover affects servers icons when hovered over
+*/
